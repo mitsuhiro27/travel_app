@@ -11,6 +11,32 @@
   </head>
 
   <body>
+   <header class="header">
+    <div class="header-inner">
+     <div class="header-left-nav">
+       <a href="/"><img alt="サイトロゴの画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
+        <form action="" accept-charset="UTF-8" method="get">
+         <div class="header-search-area">
+         <input type="text" name="area" id="area" valueclass="form-control" placeholder="エリア"> 
+          <i class="fas fa-map-market-alt"></i>
+         </div>  
+         <div class="header-search-word">
+          <input type="text" name="keyword" id="keyword" valueclass="form-control" placeholder="キーワード">
+           <i class="fas fa-search"></i>
+         </div>  
+          <!--<input type="submit" name="commit" valueclass="d-none" date-disable-with> -->
+        </form>  
+      </div>  
+       <div class="header-right-nav">
+        <div class="nav-item">
+         <a class="btn btn-primary" href="">ログイン</a> 
+         <a class="btn btn-secondary" href"">登録する</a>
+        </div>
+      </div>
+    </div>
+    
+   </header>
+
     <%= yield %>
   </body>
 </html>

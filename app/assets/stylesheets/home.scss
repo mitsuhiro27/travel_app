@@ -53,6 +53,11 @@ input {
     color: black;
   background-color: white;
 }
+.btn-del{
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
 
 //メインのcss//
 *, ::after, ::before {
@@ -64,6 +69,7 @@ input {
     background-size: cover;
     width: 100%;
     height: 650px;
+   
 }
 
 
@@ -128,7 +134,7 @@ form label {
 
 //フッターのcss//
 .footer {
-    position: relative;top: 550px;
+    position: relative;top: 300px;
     color: #fff;
     background-color: cornflowerblue;
     height: 200px;

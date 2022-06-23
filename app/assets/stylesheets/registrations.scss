@@ -1,0 +1,74 @@
+//new//
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+.new_user {
+    display: flex;
+    flex-flow: column;
+    position: relative;left: 500px;
+    border: double 5px #4ec4d3;
+    width: 500px;
+    height: 430px;
+    margin-right: 0;
+    
+}
+
+.new-signup {
+    position: absolute;top: 100px;
+    position: absolute;left: 160px;
+    
+}
+ .new-title {
+     position: relative;left: 620px;
+     position: relative;top: 90px;
+ }
+
+ .login  {
+     position: relative;left: 600px;
+     position: relative;bottom: 60px;
+ }
+
+ .actions {
+     position: relative;top: 20px;
+     position: relative;right: 75px;
+     
+ }
+
+ .actions input {
+     width: 300px;
+     height: 40px;
+ }
+
+ #error_explanation  {
+     position: relative;bottom: 77px;
+     font-size: 10px;
+     background-color: red;
+     height: 70px;
+ }
+ #error_explanation h2 {
+     position: relative;bottom: 10px;
+     color: white;
+ }
+ #error_explanation ul {
+     position: relative;bottom: 15px;
+     color: white;
+ }
+ 
+//edit//
+.acount-edit {
+    display: flex;
+    flex-flow: column;
+    position: absolute;left: 400px;
+    
+}
+ 
+.acount-edit-title {
+    position: relative;left: 570px;
+}
+
+
+.modoru {
+    position: relative;left: 660px;
+    margin-top: 400px;
+}    

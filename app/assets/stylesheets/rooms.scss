@@ -1,0 +1,47 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.room_in {
+    position: relative;left: 600px;
+}
+
+.room_date {
+    display: flex; 
+    flex-flow: column;
+    position: relative;left: 400px;
+    position: relative;bottom: 20px;
+}
+
+.label-a {
+   position: relative;bottom: 40px;
+}
+.label-b {
+    position: relative;bottom: 40px;
+}
+.label-c {
+    position: relative;bottom: 40px;
+}
+.label-d {
+    position: relative;bottom: 40px;
+}
+.label-e {
+    position: relative;bottom: 40px;
+}
+
+
+
+//フッター//
+.footer {
+    position: relative;top: 700px;
+}
+
+
+table th {
+    background-color: #fbc25b;
+    padding: 10px 20px;
+}
+
+table td {
+    background-color: #f9ecd5;
+    padding: 10px 20px;
+}

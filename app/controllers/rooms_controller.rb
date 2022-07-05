@@ -1,7 +1,8 @@
 class RoomsController < ApplicationController
 
     def index
-        @rooms = Room.all
+        @rooms = current_user.rooms.all
+        
     end    
 
     def new
@@ -10,15 +11,21 @@ class RoomsController < ApplicationController
     end    
 
     def create
-        @room = Room.new(params.require(:room).permit(:room_name, :room_image, :room_profile, :price, :address, :created_at)) 
-        @room.save #データをデータベースに保存するためのsaveメソッド実行
-        redirect_to rooms_path
+        @room = Room.new(room_params) 
+        @room.user_id = current_user.id
+        if @room.save #データをデータベースに保存するためのsaveメソッド実行
+          redirect_to rooms_path
+        else
+          render'new' 
+        end  
+
     end
 
     
 
     def show
         @room =Room.find(params[:id])
+        @user = @room.user
     end    
 
    
@@ -26,7 +33,7 @@ class RoomsController < ApplicationController
       
       private
         def room_params #ストロングパラメータ
-          params.require(:room).permit(:room_name, :room_profile, :price, :address, :room_image) #パラメーターのキー
+          params.require(:room).permit(:room_name, :room_profile, :price, :address, :room_image, :created_at) #パラメーターのキー
         end
 
  end      

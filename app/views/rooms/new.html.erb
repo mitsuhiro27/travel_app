@@ -3,10 +3,10 @@
 <%= form_for(@room,url:{controller:'rooms',action:'create'}) do |form| %>
 <div class="room_date">
    <div class="label-a">
-    <p><%= form.label :ルーム名%><br>
+    <p><%= form.label :ルーム名%><br></p>
     </div>
-    <%= form.text_field :room_name %> 
-    </p>
+    <a href="Room",@room><%= form.text_field :room_name %></a> 
+    
 
     <div class="label-b">
     <p><%= form.label :ルーム紹介 %><br>

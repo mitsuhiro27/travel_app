@@ -1,12 +1,13 @@
 
+
 <h2 class="room_in">ルーム情報登録</h2>
 <%= form_for(@room,url:{controller:'rooms',action:'create'}) do |form| %>
 <div class="room_date">
    <div class="label-a">
-    <p><%= form.label :ルーム名%><br></p>
+    <p><%= form.label :ルーム名%><br>
     </div>
-    <a href="Room",@room><%= form.text_field :room_name %></a> 
-    
+    <%= form.text_field :room_name %> 
+    </p>
 
     <div class="label-b">
     <p><%= form.label :ルーム紹介 %><br>
@@ -31,9 +32,9 @@
     </div>
     <%= form.file_field :room_image, class: "image" %>
     </p>
-    
-    
+
+
     <p><%= form.submit %> #送信ボタンを生成
     </p>  
 </div>
-<% end %>    
+<% end %>     

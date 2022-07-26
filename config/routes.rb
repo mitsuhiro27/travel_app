@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'reservations/new'
+  get 'reservations/index'
+  get 'reservations/show'
+  post 'reservations/confirm'
   get 'users/show'
   devise_for :users,:controllers => {
     :registrations => 'users/registrations',
@@ -15,7 +19,10 @@ Rails.application.routes.draw do
   resources :users, only:[:index, :show, :edit, :update]
 
   get "/" => "home#top"
-  resources:rooms
+  resources :rooms 
+  resources :reservations, only:[:create]
+
+
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

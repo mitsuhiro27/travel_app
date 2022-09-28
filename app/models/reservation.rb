@@ -8,8 +8,7 @@ class Reservation < ApplicationRecord
     validates :end_day, presence: true
     validates :number, presence: true
     
-    validate :date_before_start
-validate :date_before_finish
+    
 
 validate :start_date_check
   validate :start_end_check

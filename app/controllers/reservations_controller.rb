@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
     reservation_price = @price
      
     if @days <= 0
-      flash[:alert] = "終了日は開始日を正しく入力してください"
+      flash[:alert] = "開始日または終了日を正しく入力してください"
       redirect_to @room 
 
     elsif @reservation.number.blank?

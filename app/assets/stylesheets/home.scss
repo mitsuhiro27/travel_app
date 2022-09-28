@@ -38,6 +38,7 @@ input {
     padding: 10px;
     color: black;
   background-color: white;
+  position: relative;top: 20px;
 }
 .btn-primary:hover {
     color: #fff;
@@ -48,16 +49,44 @@ input {
     padding: 10px;
     color: #fff;
   background: black;
+  position: relative;top: 20px;
 }
 .btn-secondary:hover {
     color: black;
   background-color: white;
+}
+
+.nav-item {
+    width: 200px;
+    position: relative;bottom: 30px;
+    padding: 5px;
 }
 .btn-del{
     padding: 10px;
     background-color: black;
     color: white;
 }
+
+.avater {
+    position: relative;right: 40px;
+    position: relative;bottom: 206px;
+    width: 20px;
+}
+.user-name {
+    position: relative;bottom: 170px;
+    position: relative;right: 90px;
+    width: 50px;
+}
+
+.search_keyword {
+     height: 40px;
+}
+
+.search_area {
+    position: relative;left: 160px;
+    height: 40px;
+}
+
 
 //メインのcss//
 *, ::after, ::before {

@@ -1,11 +1,19 @@
 class UsersController < ApplicationController
-  def show
-    @user = current_user
+  def account
+    @user = User.find(params[:id])
   end
 
-  def edit
-    @user = User.find_by(id: params[:id])
+  def profile
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(params.require(:user).permit(:avater, :name, :profile))
+      redirect_to user_profile_path
+    else
+      render "profile"
+    end
   end
 end
-
 

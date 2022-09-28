@@ -27,6 +27,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"パスワード確認" %>
   </div>
 
+  <div class="label-10">
+    <p><%= f.label :プロフィール写真%><br>
+    </div>
+    <%= f.file_field :avater, class: "image" %>
+    </p>
+
   <div class="actions">
     <%= f.submit "登録する" %>
   </div>

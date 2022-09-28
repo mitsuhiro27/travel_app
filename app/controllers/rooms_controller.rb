@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
-
+  
+  
     def index
         @rooms = current_user.rooms.all
         
@@ -20,21 +21,21 @@ class RoomsController < ApplicationController
         end  
 
     end
-
     
-
     def show
         @room =Room.find(params[:id])
         @user = @room.user
         
     end    
-
+    
    
 
-      
       private
-        def room_params #ストロングパラメータ
-          params.require(:room).permit(:room_name, :room_profile, :price, :address, :room_image, :created_at) #パラメーターのキー
-        end
+
+      
+
+      def room_params #ストロングパラメータ
+        params.require(:room).permit(:room_name, :room_profile, :price, :address, :room_image, :created_at) #パラメーターのキー
+      end
 
  end      

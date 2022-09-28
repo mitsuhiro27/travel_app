@@ -17,26 +17,36 @@
      <div class="header-left-nav">
       
         <a href="/"><img alt="サイトロゴの画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
-        <form action="" accept-charset="UTF-8" method="get">
-         <div class="header-search-area">
-         <input type="text" name="area" id="area" valueclass="form-control" placeholder="エリア"> 
-          <i class="fas fa-map-market-alt"></i>
-         </div>  
-         <div class="header-search-word">
-          <input type="text" name="keyword" id="keyword" valueclass="form-control" placeholder="キーワード">
-           <i class="fas fa-search"></i>
-         </div>  
-          <!--<input type="submit" name="commit" valueclass="d-none" date-disable-with> -->
-        </form>  
+
+        <div class="header-search-area">
+         <%= search_form_for @q_header, url: search_rooms_path do |f| %>
+          <%= f.search_field :address_cont, class: 'search_area', placeholder: "エリア" %>
+         <% end %>
+         <i class="fas fa-map-market-alt"></i>
+        </div>  
+
+        <div class="header-search-word">
+         <%= search_form_for @q_header, url: search_rooms_path do |f| %>
+          <%= f.search_field :room_name_or_room_profile_or_price_or_address_cont, class: 'search_keyword', placeholder: "キーワード" %>
+         <% end %> 
+         <i class="fas fa-search"></i>
+        </div>  
+          
+        
       </div>  
        <div class="header-right-nav">
         <div class="nav-item">
-         <a class="btn btn-del" href="/logout">ログアウト</a>
-         <%= current_user.name %>
-         <a class="btn btn-room-new" href="/rooms/new">ルーム登録</a>
-        
-        </div>
-      </div>
+         <ul>
+          <li><a class="btn btn-room-new" href="/rooms/new">ルーム登録</a></li>
+          <li><a class="btn-reservsation-index" href="/reservations/index">予約済みルーム一覧</a></li>
+          <li><a class="btn-room-index" href="/rooms">登録済みルーム一覧</a></li>
+          <li><a class="btn-set" href="/users/<%= current_user.id %>/account">設定</a></li>
+          <li><a class="btn btn-del" href="/logout">ログアウト</a></li>
+         </ul> 
+        </div> 
+        <div class="user-name"><%= current_user.name %></div>
+        <div class="avater"><%= image_tag current_user.avater.to_s,size: '70x70' %></div>
+       </div>
     </div>
   <% else %>
   <header class="header">

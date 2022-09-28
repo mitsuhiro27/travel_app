@@ -1,0 +1,45 @@
+<div class="row user-row">
+  <div class="user-nav-menu">
+    <div class="user-nav user-nav-pc-p">
+        <ul>
+        <li>
+            <%= link_to "アカウント", user_account_path %>
+        </li>
+        <li class="pro">
+            <%= link_to "プロフィール", user_profile_path %>
+        </li>
+        </ul>
+    </div>
+  </div>
+  <div class="user-view">
+    <div class="user-view-box update-content">
+      <h2 class="title-p">プロフィール</h2>
+      <div class="icon-box">
+        <%= image_tag @user.avater.url,  class: "user-image" %>
+      </div>
+      <%= form_with model: @user, url: { controller: "users", action: "update" } do |f| %>
+        <table class="form-p">
+            <div class="user-p">
+                <p class="user-img"><%= f.label :user_image, "アイコン画像" %></p>
+                <p class="user-image-upload"><%= f.file_field :avater %></p>
+            </div>  
+            
+
+            <div class="user-r">
+                <p class="user-img-2"><%= f.label :name, "名前" %></p>
+                <p><%= f.text_field :name, class: "input-area" %></p>
+            </div>
+
+            <div class="user-l">
+                <p class="user-img-3"><%= f.label :profile ,"自己紹介" %></p>
+                <p><%= f.text_area :profile, class: "input-area" %></p>
+            </div>
+        </table>
+        
+        <div>
+        <%= f.submit "更新", class: "btn-p" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

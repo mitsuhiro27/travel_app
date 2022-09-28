@@ -55,6 +55,45 @@
     position: relative;left: 860px;
 }
 
+.alert {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+
+//ルーム検索結果ページ
+.search{
+    margin: 25px 30px;
+}
+
+.search_base{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search_index_view{
+    border: solid 1px #dbd9d9;
+    border-radius: 2px;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search_room{
+    padding: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.search_room_name{
+    font-weight: 700;
+    color: rgb(159, 159, 159);
+}
+
+.search_price{
+    text-align: right;
+    font-size: 18px;
+}
 
 
 //フッター//

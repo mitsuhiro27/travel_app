@@ -1,0 +1,40 @@
+
+
+<h2 class="room_in">ルーム情報登録</h2>
+<%= form_for(@room,url:{controller:'rooms',action:'create'}) do |form| %>
+<div class="room_date">
+   <div class="label-a">
+    <p><%= form.label :ルーム名%><br>
+    </div>
+    <%= form.text_field :room_name %> 
+    </p>
+
+    <div class="label-b">
+    <p><%= form.label :ルーム紹介 %><br>
+    </div>
+    <%= form.text_area :room_profile%> 
+    </p>
+
+    <div class="label-c">
+    <p><%= form.label :料金%><br>
+    </div>
+    <%= form.number_field :price %> 
+    </p>
+
+    <div class="label-d">
+    <p><%= form.label :住所%><br>
+    </div>
+    <%= form.text_field :address %> 
+    </p>
+
+    <div class="label-e">
+    <p><%= form.label :ルーム画像%><br>
+    </div>
+    <%= form.file_field :room_image, class: "image" %>
+    </p>
+
+
+    <p><%= form.submit %> 
+    </p>  
+</div>
+<% end %>     

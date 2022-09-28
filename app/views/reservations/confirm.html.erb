@@ -1,0 +1,29 @@
+<div class="container reservation-new">
+  <div class="reservations-new-nav">
+    <h2 class="reservations-content">予約内容確認</h4>
+    <h3 class="price-icon">
+      ¥ <%= @room.price %> / 日
+    </h5>
+    
+        <%= form_with model: @reservation do |f| %>
+            <div class="reservations-new-date-select"> 
+            <p><%= f.hidden_field :user_id, value: current_user.id %></p>
+            <p><%= f.hidden_field :room_id, value: @room.id %></p>
+            <p><%= f.hidden_field :number, value: @reservation.number %></p>
+            <p class="label-4"><%= f.label :start_day, "開始日" %></p>
+            <p><%= f.date_field :start_day, value:@reservation.start_day ,readonly: true %></p>
+            <p class="label-5"><%= f.label :end_day, "終了日" %></p>
+            <p><%= f.date_field :end_day, value:@reservation.end_day ,readonly: true %></p>
+
+            <h5 class="reservations-new-check-content">使用日数：<%= @days %>日</h6>
+            <h5 class="reservations-new-check-content">人数：<%= @reservation.number %>人</h6>
+
+            <p class="label-6"><%= f.label :reservation_price, "合計金額" %></p>
+            <p><%= f.text_field :reservation_price, value:@price ,readonly: true %></p>
+            <p><%= f.submit"予約を確定" %></p>
+            <p><%= link_to "ルーム詳細に戻る", controller: 'rooms', action: 'show', id: @reservation.room.id %></p>
+            </div>
+        <% end %>
+    
+  </div>
+</div>

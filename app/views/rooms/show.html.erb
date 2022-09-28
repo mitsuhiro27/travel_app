@@ -1,0 +1,31 @@
+<h2>ルーム予約</h2>
+   <p class="alert"><%= flash[:alert] %></p>
+
+    <div class="show">
+      <p><%= image_tag @room.room_image.url, size: '700x400' %></p>
+      <p><%= @room.room_name %></p>
+      <p><%= @room.room_profile %></p>
+      <h2 class="show-price">¥<%= @room.price %>/日</h2>
+    </div> 
+
+    
+     <%= form_with url: reservations_confirm_path do |f| %>
+        <div class="show-confirm">
+        <p><%= f.hidden_field :room_id, value: @room.id %></p>
+        <p class="label-1"><%= f.label :start_day, "開始日" %></p>
+        <p><%= f.date_field :start_day, class: "input-area" %></p>
+        <p class="label-2"><%= f.label :end_day, "終了日" %></p>
+        <p><%= f.date_field :end_day, class: "input-area" %></p>
+        <p class="label-3"><%= f.label :number, "人数" %></p>
+        <p><%= f.number_field :number, class: "input-area" %></p>
+        <p><%= f.submit"予約する", class: "btn room-reservation-submit" %></p>
+        </div>
+     <% end %>
+    
+   
+
+
+         
+
+   
+  

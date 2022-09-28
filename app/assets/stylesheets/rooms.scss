@@ -1,0 +1,113 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.room_in {
+    position: relative;left: 600px;
+}
+
+.room_date {
+    display: flex; 
+    flex-flow: column;
+    position: relative;left: 400px;
+    position: relative;bottom: 20px;
+}
+
+.label-a {
+   position: relative;bottom: 40px;
+}
+.label-b {
+    position: relative;bottom: 40px;
+}
+.label-c {
+    position: relative;bottom: 40px;
+}
+.label-d {
+    position: relative;bottom: 40px;
+}
+.label-e {
+    position: relative;bottom: 40px;
+}
+
+//show//
+.show-confirm {
+    display: block;
+    position: relative;top: 100px;
+    position: relative;left: 740px;
+    
+}
+
+.label-1 {
+    position: relative;bottom: 60px;
+    position: relative;right: 80px;
+}
+.label-2 {
+    position: relative;bottom: 60px;
+    position: relative;right: 80px;
+
+}
+.label-3 {
+    position: relative;bottom: 60px;
+    position: relative;right: 80px;
+}
+
+.show-price {
+    position: relative;bottom: 470px;
+    position: relative;left: 860px;
+}
+
+.alert {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+
+//ルーム検索結果ページ
+.search{
+    margin: 25px 30px;
+}
+
+.search_base{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search_index_view{
+    border: solid 1px #dbd9d9;
+    border-radius: 2px;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search_room{
+    padding: 15px;
+    color: black;
+    font-weight: 600;
+}
+
+.search_room_name{
+    font-weight: 700;
+    color: rgb(159, 159, 159);
+}
+
+.search_price{
+    text-align: right;
+    font-size: 18px;
+}
+
+
+//フッター//
+.footer {
+    position: relative;top: 700px;
+}
+
+
+table th {
+    background-color: #fbc25b;
+    padding: 10px 20px;
+}
+
+table td {
+    background-color: #f9ecd5;
+    padding: 10px 20px;
+}

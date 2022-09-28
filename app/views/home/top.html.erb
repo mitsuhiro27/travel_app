@@ -1,0 +1,70 @@
+<!-- メイン -->
+<div class="top">
+ <div class="top-main">
+  <div class="top-container">
+   <div class="container-left">
+    <div class="form-fream">
+     <div class="form-area">
+      <p class="form-area-title">Potepan Shareででまだ体感したことのない旅をしよう</p>
+      
+       <%= search_form_for @q_header, url: search_rooms_path do |f| %>
+        <%= f.label :address_cont ,"エリア" %></br>
+        <%= f.search_field :address_cont, placeholder: "東京", class: "form-control" %>
+        <p><%= f.submit "探す", class: "form-control-btn-primary" %></p>
+       <% end %>
+      
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>  
+
+<!-- サブ -->
+ <div class="top-sub">
+  <div class="panel-area">
+   <h1 class="sub-title">おすすめのエリア</h1>
+    <div class="row">
+     <div class="panel-item">
+      <span>東京</span>
+      <a href="<%= search_rooms_path(q:{address_cont:"東京"})%>">
+       <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg">
+      </a> 
+     </div> 
+
+     <div class="panel-item">
+      <span>大阪</span>
+      <a href="<%= search_rooms_path(q:{address_cont:"大阪"})%>">
+       <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg">
+      </a> 
+     </div>
+
+     <div class="panel-item">
+      <span>京都</span>
+      <a href="<%= search_rooms_path(q:{address_cont:"京都"})%>">
+       <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg">
+      </a> 
+     </div>
+
+     <div class="panel-item">
+      <span>札幌</span>
+      <a href="<%= search_rooms_path(q:{address_cont:"札幌"})%>">
+       <img class="panel-image" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg">
+      </a> 
+     </div> 
+    </div>
+   </div>
+  </div>
+ </div>    
+  
+<!-- フッター -->
+<div class="footer">
+ <p>© 2022 POTEPAN.INC.</p>
+</div> 
+ 
+
+
+
+
+
+ 
+

@@ -1,0 +1,22 @@
+<div class = "search" > 
+    <h1>検索結果：<%= @results.count %>件</h1>
+
+    <div class = "search_base" >
+        <% @results.each do |results| %>
+            <div class = "search_index_view" >
+                <%= link_to results do %>
+                    <div class = "search_room_img" >
+                        <%= image_tag results.room_image.to_s, size: '200x200' if results.room_image.present? %>
+                    </div>
+
+                    <div class = "search_room" >
+                        <h2 class = "search_room_name" ><%= results.room_name %></h2>
+                        <%= results.address %>
+                        <p class = "search_price" >￥<%= results.price %></p>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
+
